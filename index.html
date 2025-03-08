@@ -93,6 +93,15 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
         }
+
+        .reset-button {
+            background-color: #dc3545; /* Red color */
+            margin-top: 10px;
+        }
+
+        .reset-button:hover {
+            background-color: #c82333; /* Darker red */
+        }
     </style>
 </head>
 <body>
@@ -125,6 +134,8 @@
         </div>
         
         <button onclick="calculateCost()">Υπολογισμός</button>
+        <button class="reset-button" onclick="resetForm()">Επαναφορά</button>
+
         <h3 id="result"></h3>
     </div>
 
@@ -141,7 +152,16 @@
 
             document.getElementById("result").innerHTML = `Συνολικό Κόστος: €${cost.toFixed(2)} <br> Υπηρεσίες Καθαρισμού Ανέρχονται Στα: €${servicesCost.toFixed(2)}`;
         }
+
+        function resetForm() {
+            // Clear all input fields
+            document.getElementById("A").value = '';
+            document.getElementById("B").value = '';
+            document.getElementById("C").value = '';
+            document.getElementById("D").value = '';
+            document.getElementById("E").value = '';
+            document.getElementById("result").innerHTML = ''; // Clear result
+        }
     </script>
 </body>
 </html>
-
