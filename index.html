@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning Cost Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cleaning Cost Calculator</h2>
+        <label>ΑΠΟΣΤΑΣΗ (A): <input type="number" id="A" value="0"></label>
+        <label>ΤΕΤΡΑΓΩΝΙΚΑ (B): <input type="number" id="B" value="0"></label>
+        <label>ΚΡΕΒΑΤΙΑ (C): <input type="number" id="C" value="0"></label>
+        <label>ΕΠΙΣΚΕΠΤΕΣ (D): <input type="number" id="D" value="0"></label>
+        <button onclick="calculateCost()">Calculate</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function calculateCost() {
+            let A = parseFloat(document.getElementById("A").value) || 0;
+            let B = parseFloat(document.getElementById("B").value) || 0;
+            let C = parseFloat(document.getElementById("C").value) || 0;
+            let D = parseFloat(document.getElementById("D").value) || 0;
+
+            let cost = (A * 0.15) + (B * 0.11) + (C * 6) + (D + 4) + (A * 1.56 * 0.22);
+            let total = A + B + C + D;
+
+            document.getElementById("result").innerHTML = `Total Cost: €${cost.toFixed(2)} <br> Total (A+B+C+D): ${total}`;
+        }
+    </script>
+</body>
+</html>
