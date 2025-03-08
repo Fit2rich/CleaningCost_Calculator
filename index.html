@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cleaning Cost Calculator</title>
+    <title>Καθαρισμού</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -102,11 +102,34 @@
         .reset-button:hover {
             background-color: #c82333; /* Darker red */
         }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Cleaning Cost Calculator</h2>
+        <h2>ΚΟΣΤΟΣ ΚΑΘΑΡΙΣΜΟΥ</h2>
         
         <div class="form-group">
             <label for="A">ΑΠΟΣΤΑΣΗ:</label>
@@ -138,6 +161,10 @@
 
         <h3 id="result"></h3>
     </div>
+
+    <footer>
+        <p>Designed and Developed by <a href="https://www.yourwebsite.com" target="_blank">GP Web Solutions</a></p>
+    </footer>
 
     <script>
         function calculateCost() {
