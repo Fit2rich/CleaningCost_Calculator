@@ -11,41 +11,51 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background: url('https://source.unsplash.com/1600x900/?cleaning,home') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #f5f5f5; /* Set a solid color background for the body */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
+
         .container {
             width: 90%;
             max-width: 400px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
+            background: url('logo.png.jpg') no-repeat center center;
+            background-size: cover; /* Ensure the image covers the entire container */
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
         }
+
         h2 {
-            color: #333;
+            color: white; /* Set title color to white */
+            font-weight: 600; /* Similar to label styling */
         }
+
         label {
             display: block;
             margin: 10px 0 5px;
             font-weight: 600;
-            color: #555;
+            color: #333; /* Set label color to match the title */
+            font-size: 18px; /* Similar font size to the title */
         }
+
         input {
-            width: 100%;
-            padding: 10px;
+            width: 50%; /* Make the input boxes narrower */
+            padding: 12px; /* Increase padding for better spacing */
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 2px solid #4CAF50; /* Make the border green to increase visibility */
             border-radius: 5px;
             font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent for better visibility */
+            color: #333; /* Dark text for better contrast */
         }
+
         input::placeholder {
             color: #aaa;
         }
+
         button {
             width: 100%;
             padding: 12px;
@@ -57,9 +67,11 @@
             cursor: pointer;
             transition: background 0.3s;
         }
+
         button:hover {
             background: linear-gradient(45deg, #218838, #1e7e34);
         }
+
         #result {
             margin-top: 15px;
             font-size: 18px;
